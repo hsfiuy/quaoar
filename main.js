@@ -25,12 +25,15 @@ function check(){
     classifier.classify(img, gotResult);
 }
 
-function gotResult(error, result){
+function gotResult(error, results){
 if (error){
     console.log(error);
 }else{
     console.log(result);
     document.getElementById("result_object_name").innerHTML=results[0].label; 
-    document.getElementById("result_objects_accuracy").innerHTML=results[0].confidence.toFixed(3);
+    document.getElementById("result_object_accuracy").innerHTML=results[0].confidence.toFixed(3);
 }
+}
+function getEws(){
+    window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 }
